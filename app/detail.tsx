@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function DetailProdukScreen() {
   return (
     <View style={styles.container}>
-      <Text>Add friends here!</Text>
+      <Text>Baju Hits</Text>
     </View>
   );
 
