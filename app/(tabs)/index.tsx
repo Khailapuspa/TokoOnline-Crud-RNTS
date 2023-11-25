@@ -2,11 +2,13 @@ import React from 'react'
 import { Pressable, StyleSheet, TouchableOpacity } from 'react-native';
 import { Text, View } from '../../components/Themed';
 import { Image } from 'react-native';
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 
 export default function TabOneScreen() {
   const imageKaos = require("../../assets/images/kaos.png")
   const imageKemeja = require("../../assets/images/kemeja.png")
+
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Selamat Datang !</Text>
@@ -17,15 +19,13 @@ export default function TabOneScreen() {
           style={{ width: 150, height: 150 }}
         />
       </View>
-      <Link href="/detail">
-        <Pressable>
-          <TouchableOpacity
-            style={[styles.button]}
-          >
-            <Text style={styles.input}>Beli</Text>
-          </TouchableOpacity>
-        </Pressable>
-      </Link>
+
+      <TouchableOpacity
+        onPress={() => router.push('/detail')}
+        style={[styles.button]}
+      >
+        <Text style={styles.input}>Beli</Text>
+      </TouchableOpacity>
 
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <View style={styles.row}>
@@ -34,15 +34,12 @@ export default function TabOneScreen() {
           style={{ width: 150, height: 150 }}
         />
       </View>
-      <Link href="/detail">
-        <Pressable>
-          <TouchableOpacity
-            style={[styles.button]}
-          >
-            <Text style={styles.input}>Beli</Text>
-          </TouchableOpacity>
-        </Pressable>
-      </Link>
+      <TouchableOpacity
+        onPress={() => router.push('/detail')}
+        style={[styles.button]}
+      >
+        <Text style={styles.input}>Beli</Text>
+      </TouchableOpacity>
 
     </View>
   );
