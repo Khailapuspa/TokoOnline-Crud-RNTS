@@ -6,6 +6,7 @@ import { Link } from 'expo-router';
 
 export default function TabOneScreen() {
   const imageKaos = require("../../assets/images/kaos.png")
+  const imageKemeja = require("../../assets/images/kemeja.png")
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Selamat Datang !</Text>
@@ -16,15 +17,16 @@ export default function TabOneScreen() {
           style={{ width: 150, height: 150 }}
         />
       </View>
-      <View>
-        <TouchableOpacity
-          style={[styles.button]}
-          onPress={() => navigation.navigate("detail")}
-        >
-          <Text style={styles.input}>Beli</Text>
-        </TouchableOpacity>
+      <Link href="/detail">
+        <Pressable>
+          <TouchableOpacity
+            style={[styles.button]}
+          >
+            <Text style={styles.input}>Beli</Text>
+          </TouchableOpacity>
+        </Pressable>
+      </Link>
 
-      </View>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <View style={styles.row}>
         <Image
@@ -32,14 +34,16 @@ export default function TabOneScreen() {
           style={{ width: 150, height: 150 }}
         />
       </View>
-      <View>
-        <TouchableOpacity
-          style={[styles.button]}
-          onPress={() => navigation.navigate("detail")}
-        >
-          <Text style={styles.input}>Beli</Text>
-        </TouchableOpacity>
-      </View>
+      <Link href="/detail">
+        <Pressable>
+          <TouchableOpacity
+            style={[styles.button]}
+          >
+            <Text style={styles.input}>Beli</Text>
+          </TouchableOpacity>
+        </Pressable>
+      </Link>
+
     </View>
   );
 }

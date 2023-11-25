@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function DetailProdukScreen() {
+export default function detailScreen() {
   return (
     <View style={styles.container}>
       <Text>Baju Hits</Text>
