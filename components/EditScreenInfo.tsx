@@ -5,6 +5,7 @@ import Colors from '../constants/Colors';
 import { ExternalLink } from './ExternalLink';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
+import { Image } from 'react-native';
 
 
 export default function EditScreenInfo({ path }: { path: string }) {
