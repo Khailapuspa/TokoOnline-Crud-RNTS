@@ -3,14 +3,6 @@ import { Button, StyleSheet, TouchableOpacity } from 'react-native';
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
 import { Image } from 'react-native';
-import { Link } from 'expo-router';
-
-import imageKaos from '../../assets/images/kaos.png';
-import imageKemeja from '../../assets/images/kemeja.png';
-
-const handleBeli = () => {
-  console.log('You tapped the button!');
-};
 
 export default function TabOneScreen() {
   return (
@@ -34,18 +26,9 @@ export default function TabOneScreen() {
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <View style={[styles.row, styles.produk]}>
       <Image
-        source={imageKemeja}
-        style={{ width: 150, height: 150 }}
-      />
-      </View>
-      <TouchableOpacity
-          style={[styles.button]}
-          onPress={() => {
-            console.log('You tapped the button!');
-          }}
-        >
-          <Text style={styles.input}>Beli</Text>
-        </TouchableOpacity>
+  source={{uri: 'asset:/assets/image/kaos.png'}}
+  style={{width: 40, height: 40}}
+/>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
     </View>
   );
