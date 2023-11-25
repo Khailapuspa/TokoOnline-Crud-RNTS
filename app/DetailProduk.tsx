@@ -1,15 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-class DetailProduk extends React.Component {
-  render() {
+export default function DetailProduk() {
     return (
       <View style={styles.container}>
         <Text>Add friends here!</Text>
       </View>
     );
   }
-}
 
 const styles = StyleSheet.create({
     container: {
@@ -19,5 +17,3 @@ const styles = StyleSheet.create({
       backgroundColor: ""
     },
 });
-
-export default DetailProduk;
