@@ -29,15 +29,22 @@ export default function TabOneScreen() {
         >
           <Text style={styles.input}>Beli</Text>
         </TouchableOpacity>
-
       </View>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <View style={[styles.row, styles.produk]} />
-      <Image
-        source={{ uri: 'asset:/assets/image/kaos.png' }}
-        style={{ width: 40, height: 40 }}
-      />
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <View style={styles.row}>
+        <Image
+          source={imageKemeja}
+          style={{ width: 150, height: 150 }}
+        />
+      </View>
+      <View>
+        <TouchableOpacity
+          style={[styles.button]}
+          onPress={() => navigation.navigate("detail")}
+        >
+          <Text style={styles.input}>Beli</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
